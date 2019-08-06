@@ -23,9 +23,6 @@ public class SlideshowCreator : EditorWindow {
 
 		GUILayout.Label("Drag Slideshow From Scene", EditorStyles.boldLabel);
 		slideshow = (GameObject)EditorGUILayout.ObjectField ("Slideshow Asset", slideshow, typeof(GameObject), true);
-
-//		directoryPath = EditorGUILayout.TextField("Text Field", directoryPath);
-
 		GUILayout.Label ("Click to select folder of images to add to the slideshow:", EditorStyles.label);
 
 		if (GUILayout.Button ("Select directory with images")) {
