@@ -20,8 +20,8 @@ public class TerminalDialog : EditorWindow
     static UnityEngine.SceneManagement.Scene currentScene;
     Vector2 scrollPos;
 
-    string screenPrefabPath = "Assets/Prefabs/TerminalDialog/Screen.prefab";
-    string optionPrefabPath = "Assets/Prefabs/TerminalDialog/Option.prefab";
+	string screenPrefabPath = "Assets/TerminalDialog/Prefabs/Screen.prefab";
+	string optionPrefabPath = "Assets/TerminalDialog/Prefabs/Option.prefab";
     Object screenPrefab;
     Object optionPrefab;
 
