@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1db1d907ef6944e29bc5d985d2d3d15
+guid: ea8a0c52baeff4ca0b81a7d944005d15
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -23,8 +23,6 @@ ModelImporter:
     4300000: option
     4300002: screen
     4300004: terminal
-    7400000: Default Take
-    9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -114,7 +112,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
