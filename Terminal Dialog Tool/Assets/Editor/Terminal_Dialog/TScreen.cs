@@ -77,12 +77,13 @@ public class TScreen {
 
 		// Generate Options objects
 		float offset = o.GetComponent<MeshRenderer>().bounds.size.y;
+		int pos = options.Count - 1;
 		for (int i = 0; i < options.Count; i++) {
 			GameObject optObj = Object.Instantiate (o, screen.transform);
 			optObj.name = "option " + i;
 
 			// Adjust location if needed
-			optObj.transform.position = new Vector3(optObj.transform.position.x, optObj.transform.position.y + (i * offset), optObj.transform.position.z);
+			optObj.transform.position = new Vector3(optObj.transform.position.x, optObj.transform.position.y + (pos-- * offset), optObj.transform.position.z);
 
 			//Set text property
 			Text optText = getTextComponent (optObj.transform);
