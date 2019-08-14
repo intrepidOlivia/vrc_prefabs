@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEditor;
 
 public class TerminalData {
 
 	public static List<TerminalData> terminals = new List<TerminalData>();
 	static string SCREEN_OPTIONS_POSTFIX = "screen_options.txt";
-	public static readonly string SAVE_PATH = "Assets/TerminalDialog/Save Files/";
+	static readonly string PROJECT_ROOT = "Assets/TerminalDialog";
+	static readonly string SAVE_DIR = "Save Files";
+	public static readonly string SAVE_PATH = PROJECT_ROOT + "/" + SAVE_DIR + "/";
 
 	public string id;
 	public List<TScreen> screens = new List<TScreen>();
@@ -104,9 +107,16 @@ public class TerminalData {
 		}
 	}
 
+	static void checkSaveDirectory() {
+		if (!AssetDatabase.IsValidFolder (SAVE_PATH)) {
+			AssetDatabase.CreateFolder (PROJECT_ROOT, SAVE_DIR);
+		}
+	}
+
 	static void saveScreens(TerminalData t) {
 		string screenOptionsPath = SAVE_PATH + t.id + SCREEN_OPTIONS_POSTFIX;
 
+		checkSaveDirectory ();
 		createScreenFiles (t);
 
 		Debug.Log ("Writing screens to file for terminal " + t.id);
