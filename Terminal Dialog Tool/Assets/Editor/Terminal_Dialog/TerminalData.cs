@@ -7,7 +7,7 @@ public class TerminalData {
 
 	public static List<TerminalData> terminals = new List<TerminalData>();
 	static string SCREEN_OPTIONS_POSTFIX = "screen_options.txt";
-	public static readonly string SAVE_PATH = "Assets/TerminalDialog/";
+	public static readonly string SAVE_PATH = "Assets/TerminalDialog/Save Files/";
 
 	public string id;
 	public List<TScreen> screens = new List<TScreen>();
