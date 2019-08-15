@@ -26,6 +26,8 @@ ExportedObj/
 *.pdb
 *.opendb
 VRCSDK.meta
+*.txt
+*.txt.meta
 
 # Unity3D generated meta files
 *.pidb.meta
