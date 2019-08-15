@@ -108,7 +108,7 @@ public class TerminalData {
 	}
 
 	static void checkSaveDirectory() {
-		if (!AssetDatabase.IsValidFolder (SAVE_PATH)) {
+		if (!AssetDatabase.IsValidFolder (PROJECT_ROOT + "/" + SAVE_DIR)) {
 			AssetDatabase.CreateFolder (PROJECT_ROOT, SAVE_DIR);
 		}
 	}
