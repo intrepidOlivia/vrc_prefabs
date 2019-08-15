@@ -18,13 +18,16 @@ public class TerminalDialog : EditorWindow
     TScreen screen;
     SOption option;
     static UnityEngine.SceneManagement.Scene currentScene;
-    Vector2 scrollPos;
+    
+	// UI scrolling and colors
+	Vector2 scrollPos;
+	GUIStyle redFont = new GUIStyle();
 
+	// Paths and Prefabs
 	string screenPrefabPath = "Assets/TerminalDialog/Prefabs/Screen.prefab";
 	string optionPrefabPath = "Assets/TerminalDialog/Prefabs/Option.prefab";
     Object screenPrefab;
     Object optionPrefab;
-
     static readonly string SAVE_PATH = TerminalData.SAVE_PATH;
     string screenIndexPath;
     string screenListPath;
@@ -264,11 +267,25 @@ public class TerminalDialog : EditorWindow
         option.text = EditorGUILayout.TextField(option.text);
         EditorGUILayout.EndHorizontal();
 
-        string[] destinations = terminalData.screens.Select(s => s.id).ToArray();
+		string[] destinations = terminalData.screens.Select(s => {
+			if (s.index == option.screen.index) {
+				return s.id + " [CURRENT SCREEN]";
+			}
+			return s.id;
+		}).ToArray();
 
         EditorGUILayout.BeginHorizontal();
         option.destination = EditorGUILayout.Popup("Destination screen:", option.destination, destinations);
         EditorGUILayout.EndHorizontal();
+
+		if (option.destination == option.screen.index) {
+			redFont.normal.textColor = Color.red;
+			EditorGUILayout.BeginHorizontal ();
+			GUILayout.FlexibleSpace ();
+			GUILayout.Label ("Destination is set to the current screen.", redFont);
+			GUILayout.FlexibleSpace ();
+			EditorGUILayout.EndHorizontal ();
+		}
 
         EditorGUILayout.BeginHorizontal();
         GUILayout.Space(30);
