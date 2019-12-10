@@ -28,7 +28,7 @@ A default computer terminal model and screen/option prefabs are provided, but yo
 * Two editing sections will appear: Edit Screen and Edit Option. Modify the text that will be on the screen by inputting text into the "screen text" box.
 * To add a new option, press the [+] button next to the option selection bar.
   * This will immediately create an option for your screen (options have numbers instead of ID's). Edit the Option's text by inputting text into the "option text" field, and select its destination screen by selecting from the dropdown menu. Its destination screen is the Screen that will appear when the user clicks this Option.
-* Recommended Workflow: Create all Screens first. Then create all Options. this will allow you to select from all available screens when choosing a destination for your new Option.
+* **Recommended Workflow**: Create all Screens first. Then create all Options. this will allow you to select from all available screens when choosing a destination for your new Option.
 
 ### Finalizing your dialog
 
