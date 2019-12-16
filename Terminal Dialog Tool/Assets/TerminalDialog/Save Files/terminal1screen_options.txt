@@ -1,0 +1,4 @@
+go to screen1|2|go to screen2|1|go to screen3|2|go to screen4|3|
+go to screen1|0|go to screen2|1|go to screen3|2|go to screen4|3|
+
+

@@ -5,6 +5,7 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 VRCSDK/
+/Plugins/
 
 # Visual Studio cache directory
 .vs/
@@ -24,6 +25,9 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+VRCSDK.meta
+*.txt
+*.txt.meta
 
 # Unity3D generated meta files
 *.pidb.meta
